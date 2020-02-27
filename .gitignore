@@ -1,0 +1,14 @@
+*.jl.*.cov
+*.jl.cov
+*.jl.mem
+.DS_Store
+/Manifest.toml
+/dev/
+/docs/build/
+/docs/site/
+
+_git2_a08396
+
+test_files/plot_test.jl
+
+3x3_gaussian_kernel_fitting/
