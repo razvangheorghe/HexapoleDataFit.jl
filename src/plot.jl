@@ -52,13 +52,7 @@ function plotEllipse(ell::ParametricFormEllipse)
         gcf()
 end
 
-# function plotEllipseRad(ell::EllipseFit.ParametricFormEllipse{Float64,Float64,Float64})
-#         ax = gca()
-#         center = tuple(ell.center...)
-#         width = ell.semiaxis_lengths[1]
-#         height = ell.semiaxis_lengths[2]
-#         angle = rad2deg(ell.ccw_angle)
-#         ell = matplotlib.patches.Ellipse(center, width, height, angle, color = "r", fill = false)
-#         ax.add_patch(ell)
-#         gcf()
-# end
+
+function plotEllipse(ell::ConicFormEllipse)
+        plotEllipse(conic2parametric(ell))
+end
